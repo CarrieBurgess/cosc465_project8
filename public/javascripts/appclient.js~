@@ -1,15 +1,15 @@
 var myapp = (function(){
     var start_ping = function() {
         var socket = io.connect();
-        totrtt = 0;
+        avrtt = 0;
         for(var i=1;i<=5;i++){
-            socket.emit('ping', {timestamp: Date.now(), seq_num: i, tot: totrtt});
+            socket.emit('ping', {timestamp: Date.now(), seq_num: i, tot: avrtt});
             socket.on('pong', function(data) {
                 var rtt = Date.now() - data.timestamp;
                 console.log("Ping RTT (milliseconds): " + rtt);
-                totrtt += rtt;
+                avrtt += rtt;
             });
-            avrtt/=5;
+            //avrtt/=5;
         }
     };
 
