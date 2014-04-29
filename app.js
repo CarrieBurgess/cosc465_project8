@@ -28,11 +28,14 @@ app.configure(function() {
 
 // set up socket.io routes
 var perftests = require('./perftests.js');
-app.io.route('ping', perftests.ping);
+var avrtt = app.io.route('ping', perftests.ping);
 
 // set up "normal" http routes
 var views = require('./views.js');
 app.get('/', views.index);
+
+app.get('/tests', views.tests);
+
 
 app.listen(port);
 console.log("App started on port " + port);
