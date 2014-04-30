@@ -11,7 +11,7 @@ block content
     
     a(class = 'button', href = 'http://tagpro.koalabeast.com/') TagPro
     
-    p If the battle scene is not for you, perhaps you are more inclined to take the route of a spy, gleaning information for us to defeat our enemies.  In that case, you might need to upload large amounts of data, like new maps that will be slanted against the enemies, or information about enemy strategies.  If that is the case, you will need to know your data upload speed.  To figure out how long it takes to upload 120,000 bytes of data, click the link below: 
+    p If the battle scene is not for you, perhaps you are more inclined to take the route of a spy, gleaning information for us to defeat our enemies.  In that case, you might need to upload large amounts of data, like new maps that will be slanted against the enemies, or information about enemy strategies.  If that is the case, you will need to know your data upload speed.  To figure out how long it takes to upload 12,000 bytes of data, click the link below: 
     
     a(href='/upload') Throughput Test
 
