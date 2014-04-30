@@ -8,7 +8,7 @@ var myapp = (function(){
         
         if(data.seq_num==4){
             socket.emit('latency_test', {avgrtt: totrtt/5});
-            jQuery("#status").text("Your avg RTT: " + (totrtt/5) + " milliseconds. \nPlease tell your people to pay more attention to science/ technology and speed things up so we can communicate!");
+            jQuery("#status").text("Your avg RTT: " + (totrtt/5) + " milliseconds.");
             jQuery("#status").css({color: 'blue'});
             jQuery("#results").css("display","block");
             console.log("\n");
@@ -22,7 +22,7 @@ var myapp = (function(){
         var totrtt = data.totrtt + rtt;
         if(data.seq_num==4) {
             socket.emit('upload_test', {upload_avg: totrtt/5});
-            jQuery("#uploadstatus").text("Your avg upload RTT: " + (totrtt/5) + " ms");
+            jQuery("#uploadstatus").text("Your avg upload RTT: " + (totrtt/5) + " milliseconds.");
             jQuery("#uploadstatus").css({color: 'green'});
             jQuery("#uploadstatus").css("display", "block");
             console.log("\n");

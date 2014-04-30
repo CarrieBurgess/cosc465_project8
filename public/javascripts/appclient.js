@@ -32,7 +32,7 @@ var myapp = (function(){
     });
     
     var start_upload = function() {
-        var arr = new Float64Array(15000);
+        var arr = new Float64Array(1500);
         socket.emit('upload_ping', {uploadtest: arr, timestamp: Date.now(), seq_num: 0, totrtt: 0});
     };
     
