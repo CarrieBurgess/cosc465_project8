@@ -9,6 +9,11 @@ exports.tests = function(req, res){
     res.render('tests', {title: "Speed tests", message: "testing 1,2,3", user: username});
 };
 
+exports.upload = function(req, res){
+    var username = userdb.get_user_name(req.session.id);
+    res.render('upload', {user: username});
+
+};
 /*
 exports.results = function(req, res) {
     var username = userdb.get_user_name(req.session.id);

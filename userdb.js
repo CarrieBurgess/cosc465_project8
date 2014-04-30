@@ -11,7 +11,8 @@ var add_user = function(id, user) {
         userhash[id] = {
             'id': id,
             'user': user,
-            'latency_results': []
+            'latency_results': [],
+            'upload_latency': []
         };
     }
     return userhash[id];
@@ -26,9 +27,27 @@ exports.get_user_name = function(id) {
 };
 
 
-exports.get_latency_results = function(id) {
-    if (unserhash[id] === undefined) {
+exports.add_latency_result = function(id, result) {
+    if (userhash[id] === undefined) {
         add_user(id, undefined);
     }
+    console.log(typeof(result))
+    console.log(result);
+    userhash[id].latency_results[userhash[id].latency_results.length] = result;
+};
+
+exports.get_latency_results = function(id){
     return userhash[id].latency_results;
 };
+
+
+
+
+exports.add_upload_result = function(id, result) {
+    if (userhash[id] === undefined) {
+        add_user(id, undefined);
+    }
+    userhash[id].upload_latency[userhash[id].upload_latency.length] = result;
+};
+
+

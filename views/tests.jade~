@@ -3,10 +3,12 @@ extends layout
 block content
     div#testcontrol
         h3 Run tests
-        p
+        p 
             a(href="/") Home
-
-        a#startping(href="#") Latency test
-
-    div#status
+        p 
+            a#startping(href="#") Latency test
+            
+        p Click 'Latency test' to find out how slow you are, Human of Earth!
         
+        h3 Results
+    div#status
